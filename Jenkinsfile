@@ -18,6 +18,12 @@ pipeline {
                 bat 'echo Build selesai'
             }
         }
+        stage('Cek Docker') {
+            steps {
+                bat 'whoami'
+                bat 'docker version'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {
