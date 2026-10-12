@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
 environment {
-    IMAGE_NAME = 'USERNAME_DOCKERHUB/simple-app'
+    IMAGE_NAME = 'asrilgufta/simple-app'
     REGISTRY = 'https://index.docker.io/v1/'
     REGISTRY_CREDENTIALS = 'dockerhub-credentials'
 }
