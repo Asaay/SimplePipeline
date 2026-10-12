@@ -4,7 +4,7 @@ pipeline {
     IMAGE_NAME = 'asrilgufta/simple-app'
     REGISTRY = 'https://index.docker.io/v1/'
     REGISTRY_CREDENTIALS = 'dockerhub-credentials'
-    PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+    PATH = "C:\\Users\\Asr\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
 }
     }
     stages {
