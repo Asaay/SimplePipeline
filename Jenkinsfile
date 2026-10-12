@@ -1,9 +1,11 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'asrilgufta/simple-app'
-        REGISTRY = 'https://index.docker.io/v1/'
-        REGISTRY_CREDENTIALS = 'dockerhub-credentials'
+    IMAGE_NAME = 'asrilgufta/simple-app'
+    REGISTRY = 'https://index.docker.io/v1/'
+    REGISTRY_CREDENTIALS = 'dockerhub-credentials'
+    PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+}
     }
     stages {
         stage('Checkout') {
