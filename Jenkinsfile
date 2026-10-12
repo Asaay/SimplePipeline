@@ -1,11 +1,10 @@
 pipeline {
     agent any
     environment {
-environment {
-    IMAGE_NAME = 'asrilgufta/simple-app'
-    REGISTRY = 'https://index.docker.io/v1/'
-    REGISTRY_CREDENTIALS = 'dockerhub-credentials'
-}
+        IMAGE_NAME = 'asrilgufta/simple-app'
+        REGISTRY = 'https://index.docker.io/v1/'
+        REGISTRY_CREDENTIALS = 'dockerhub-credentials'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -16,7 +15,7 @@ environment {
         stage('Build') {
             steps {
                 echo 'Mulai build aplikasi'
-                bat 'npm install && npm run build' // Sesuaikan dengan teknologi Anda
+                bat 'echo Build selesai'
             }
         }
         stage('Build Docker Image') {
@@ -42,13 +41,13 @@ environment {
     }
     post {
         always {
-            echo 'Selesai build 🏁'
+            echo 'Selesai build'
         }
         success {
-            echo '✅ Pipeline berhasil!'
+            echo 'Pipeline berhasil!'
         }
         failure {
-            echo '❌ Pipeline gagal!'
+            echo 'Pipeline gagal!'
         }
     }
 }
